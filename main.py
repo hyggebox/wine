@@ -26,7 +26,7 @@ def main():
 
 
     wines_df = pandas.read_excel('wine3.xlsx', keep_default_na=False)
-    categories = set(wines_df['Категория'].to_list())
+    categories = sorted(set(wines_df['Категория'].to_list()))
 
     data_beverages = {}
     for category in categories:
